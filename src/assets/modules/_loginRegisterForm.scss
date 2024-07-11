@@ -6,6 +6,8 @@
   border: 1px solid #f7f7f7;
   box-shadow: 2.4px 6.1px 8.6px -0.8px #8d8d8d33;
   background-color: #fff;
+  @include spacing(s);
+ 
 
   &_icon_container {
     display: flex;
@@ -14,6 +16,17 @@
     img {
       height: 60px;
       width: 120px;
+    }
+  }
+
+  &_login_register_path {
+    @include flex(center, flex-start, row, 25px);
+    color: $textColorSecondary;
+
+    &_border {
+      width: 100%;
+      border-bottom: 1px solid $grey300;
+      @include flex(center, center, column, 25px);
     }
   }
 }

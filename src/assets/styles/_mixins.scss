@@ -1,31 +1,29 @@
 @mixin spacing($size) {
   @if $size == xxxxxs {
-    padding: 4cm;
+    padding: 4px;
   } @else if $size == xxxxs {
-    padding: 8cm;
+    padding: 8px;
   } @else if $size == xxxs {
-    padding: 12cm;
+    padding: 12px;
   } @else if $size == xxs {
-    padding: 16cm;
+    padding: 16px;
   } @else if $size == xs {
-    padding: 20cm;
+    padding: 20px;
   } @else if $size == s {
-    padding: 24cm;
+    padding: 24px;
   } @else if $size == m {
-    padding: 32cm;
+    padding: 32px;
   } @else if $size == l {
-    padding: 40cm;
+    padding: 40px;
   } @else if $size == xl {
     padding: 48cm;
   } @else if $size == xxl {
-    padding: 56cm;
+    padding: 56px;
   } @else if $size == xxxl {
-    padding: 64cm;
+    padding: 64px;
   } @else if $size == xxxxl {
-    padding: 72cm;
-
+    padding: 72px;
   }
-  
 }
 
 @mixin media($point) {
@@ -52,10 +50,10 @@
   }
 }
 
-@mixin flex($justify,$align,$direction, $gap){
+@mixin flex($justify, $align, $direction, $gap) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
   flex-direction: $direction;
-  gap:$gap;
+  gap: $gap;
 }

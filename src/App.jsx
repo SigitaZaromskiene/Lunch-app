@@ -1,10 +1,10 @@
-import "./assets/App.scss"
-import Login from "./components/Pages/Login"
-
+import "./assets/App.scss";
+import Login from "./components/Pages/Login";
 
 export function App() {
   return (
-    <div className='app_container'><Login/></div>
-
+    <div className="app_container">
+      <Login />
+    </div>
   );
 }
