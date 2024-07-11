@@ -1,7 +1,11 @@
+import icon from "../../assets/img/icon.png"
+
 function LoginRegisterForm (){
 return (
     <form className='form_container'>
-        <icon></icon>
+        <div className='form_container_icon_container'>
+        <img src={icon}></img>
+        </div>
         <div><a href/><p>Login</p>
         <a href/><p>Register</p></div>
         <h2>Register</h2>
@@ -19,6 +23,7 @@ return (
             <input type='checkbox'></input>
             <p>I have read the <a href>Comunity Rules</a></p>
         </div>
+     
         <button></button>
     </form>
 )

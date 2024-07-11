@@ -1,9 +1,9 @@
 import LoginRegisterForm from "../Reusable/LoginRegisterFrom";
 
-function Login (){
+export default function Login (){
     return (
         <LoginRegisterForm/>
     )
 }
 
-export default Login
+

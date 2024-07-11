@@ -1,17 +1,17 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  body {
-    font-family: 'Poppins', 'sans-serif';
-   
-    
-  }
+body {
+  font-family: "Poppins", "sans-serif";
+}
 
-  .app_container {
-  color: green;
-    min-height: 100vh;
-    width: 100%;
-  }
+.app_container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
