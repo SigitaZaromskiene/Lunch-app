@@ -1,6 +1,6 @@
 function LoginRegisterForm (){
 return (
-    <form>
+    <form className='form_container'>
         <icon></icon>
         <div><a href/><p>Login</p>
         <a href/><p>Register</p></div>

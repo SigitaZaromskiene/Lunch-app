@@ -23,7 +23,9 @@
     padding: 64cm;
   } @else if $size == xxxxl {
     padding: 72cm;
+
   }
+  
 }
 
 @mixin media($point) {
@@ -48,4 +50,12 @@
       @content;
     }
   }
+}
+
+@mixin flex($justify,$align,$direction, $gap){
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  gap:$gap;
 }

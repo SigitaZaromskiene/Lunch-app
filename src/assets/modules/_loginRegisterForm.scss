@@ -1,0 +1,9 @@
+.form_container {
+    height: 391px;
+    width: 592px;
+    @include flex(center, flex-start, column, 25px);
+    border-radius:$borderRadiusRegular;
+    
+    color: #fff;
+
+}

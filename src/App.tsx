@@ -1,8 +1,10 @@
 import "./assets/App.scss"
+import Login from "./components/Pages/Login"
 
 
 export function App() {
   return (
-  <p>Labas</p>
+    <div className='app-container'>  <Login/></div>
+
   );
 }
