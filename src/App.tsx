@@ -1,11 +1,15 @@
+import React from "react";
 import "./assets/App.scss";
-import Login from "./components/Pages/Login";
+import Layout from "./components/Layout";
+import Nav from "./components/Nav";
 
 const App: React.FC = () => {
   return (
-    <div className="app_container">
-      <Login />
-    </div>
+    <>
+   <Layout>
+    <Nav/>
+      </Layout>
+      </>
   );
 };
 

@@ -1,0 +1,26 @@
+.nav {
+  background-color: $primary800;
+  height: 978px;
+  width: 250px;
+  border-top-right-radius: $borderRadiusRegular;
+  border-bottom-right-radius: $borderRadiusRegular;
+  @include flex(flex-start, center, column, 50px);
+  padding: 30px 0px;
+  position: relative;
+
+  &__list {
+    @include flex(center, flex-start, column, 20px);
+
+    &-icon path {
+      fill: #ffffff;
+    }
+
+    &-link {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      background-color: $primary800;
+      border: none;
+    }
+  }
+}
