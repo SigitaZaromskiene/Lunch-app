@@ -1,13 +1,21 @@
 import LogoHorizontal from "./Reusable/LogoHorizontal";
 import NavBtn from "./Buttons/NavBtn";
 import ArrowBtn from "./Buttons/ArrowBtn";
+import LogoVertical from "./Reusable/LogoVertical";
+import { useState } from "react";
 
 const Nav: React.FC = () => {
+  const [fullNav, setFullNav] = useState<boolean>(true);
+
+  function navWidthHandler() {
+    setFullNav((prev) => !prev);
+  }
+
   return (
-    <nav className="nav">
-      <LogoHorizontal />
+    <nav className={fullNav ? "nav":"nav-colapsed"}>
+      {fullNav? <LogoHorizontal />:<LogoVertical/>}
       <div className="nav__list">
-        <NavBtn>
+        <NavBtn fullNav={fullNav}>
           <svg
             width="24"
             height="24"
@@ -24,13 +32,13 @@ const Nav: React.FC = () => {
               d="M17.6002 3.59961H7.2002V19.5996H17.6002C18.4826 19.5996 19.2002 18.882 19.2002 17.9996V5.19961C19.2002 4.31721 18.4826 3.59961 17.6002 3.59961ZM17.6002 17.9996H8.8002V5.19961H17.6002V17.9996Z"
               fill="#0D1F2E"
             />
-             <title>Food menu icon</title>
+            <title>Food menu icon</title>
           </svg>
-          <a href="#" className="nav__list-link">
+          <a href="#" className={fullNav ? "nav__list-link":"nav-colapsed__list-link"}>
             Food Menu
           </a>
         </NavBtn>
-        <NavBtn>
+        <NavBtn fullNav={fullNav}>
           <svg
             width="24"
             height="24"
@@ -53,9 +61,11 @@ const Nav: React.FC = () => {
             </defs>
             <title>Available lunch icon</title>
           </svg>
-          <a href="#" className="nav__list-link">Available lunch</a>
+          <a href="#" className={fullNav ? "nav__list-link":"nav-colapsed__list-link"}>
+            Available lunch
+          </a>
         </NavBtn>
-        <NavBtn>
+        <NavBtn fullNav={fullNav}>
           <svg
             width="24"
             height="24"
@@ -77,9 +87,11 @@ const Nav: React.FC = () => {
             </defs>
             <title>Your orders icon</title>
           </svg>
-          <a href="#" className="nav__list-link">Your orders</a>
+          <a href="#" className={fullNav ? "nav__list-link":"nav-colapsed__list-link"}>
+            Your orders
+          </a>
         </NavBtn>
-        <NavBtn>
+        <NavBtn fullNav={fullNav}>
           <svg
             width="24"
             height="24"
@@ -101,10 +113,12 @@ const Nav: React.FC = () => {
             </defs>
             <title>Ratings stars icon</title>
           </svg>
-          <a href="#" className="nav__list-link">Ratings</a>
+          <a href="#" className={fullNav ? "nav__list-link":"nav-colapsed__list-link"}>
+            Ratings
+          </a>
         </NavBtn>
       </div>
-      <ArrowBtn />
+      <ArrowBtn fullNav={fullNav} navWidthHandler={navWidthHandler} />
     </nav>
   );
 };

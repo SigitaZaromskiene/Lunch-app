@@ -2,6 +2,8 @@ import styles from "../../assets/styles/LoginRegisterForm.module.scss";
 import classNames from "classnames/bind";
 import LogoHorizontal from "./LogoHorizontal";
 
+// This component is not finished
+
 const cx = classNames.bind(styles);
 
 const LoginRegisterForm: React.FC = () => {

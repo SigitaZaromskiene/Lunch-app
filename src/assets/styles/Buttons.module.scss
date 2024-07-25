@@ -1,4 +1,4 @@
-.nav-btn {
+.nav-btn__expanded {
   border-radius: $borderRadiusRegular;
   background-color: $primary800;
   @include flex(flex-start, center, row, 20px);
@@ -15,6 +15,29 @@
   }
   &:hover {
     background-color: $primary600;
+  }
+  &:active {
+    background-color: $primary400;
+  }
+}
+
+.nav-btn__colapsed {
+  border-radius: $borderRadiusRegular;
+  background-color: $primary800;
+  @include flex(flex-start, center, column, 5px);
+  border: 1px solid transparent;
+  padding: 1px;
+  font-size: 14px;
+  width: 100%;
+  cursor: pointer;
+
+  &:focus {
+    background-color: $primary800;
+    border: 1px solid $secondary600;
+  }
+  &:hover {
+    background-color: $primary600;
+    
   }
   &:active {
     background-color: $primary400;
