@@ -57,3 +57,26 @@
   gap: $gap;
   justify-content: $justify;
 }
+
+@mixin nav-btn-base {
+  border-radius: $borderRadiusRegular;
+  background-color: $primary800;
+  border: 2px solid transparent;
+  width: 100%;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  
+
+  &:focus {
+    background-color: $primary800;
+    border: 2px solid $secondary600;
+    box-shadow: $mediumShadow;
+  }
+  &:hover {
+    background-color: $primary600;
+  }
+  &:active {
+    background-color: $primary400;
+  }
+}

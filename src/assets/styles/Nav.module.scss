@@ -9,7 +9,7 @@
   position: relative;
 
   &__list {
-    @include flex(center, flex-start, column, 20px);
+    @include flex(center, flex-start, column, 15px);
     padding: 1px;
 
     &-icon path {

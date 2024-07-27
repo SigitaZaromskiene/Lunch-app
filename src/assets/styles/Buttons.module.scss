@@ -1,46 +1,21 @@
 .nav-btn__expanded {
-  border-radius: $borderRadiusRegular;
-  background-color: $primary800;
+  @include nav-btn-base;
   @include flex(flex-start, center, row, 20px);
   padding: 6px 12px;
-  border: 1px solid transparent;
   height: 40px;
-  font-size: 18px;
-  width: 100%;
-  cursor: pointer;
-
-  &:focus {
-    background-color: $primary800;
-    border: 1px solid $secondary600;
-  }
-  &:hover {
-    background-color: $primary600;
-  }
-  &:active {
-    background-color: $primary400;
-  }
+  font-size: 16px;
 }
 
 .nav-btn__colapsed {
-  border-radius: $borderRadiusRegular;
-  background-color: $primary800;
-  @include flex(flex-start, center, column, 5px);
-  border: 1px solid transparent;
+  @include nav-btn-base;
+  @include flex(center, center, column, 5px);
   padding: 1px;
-  font-size: 14px;
+  font-size: 12px;
   width: 100%;
-  cursor: pointer;
+  height: 70px;
 
-  &:focus {
-    background-color: $primary800;
-    border: 1px solid $secondary600;
-  }
-  &:hover {
-    background-color: $primary600;
-    
-  }
-  &:active {
-    background-color: $primary400;
+  p {
+    text-align: center;
   }
 }
 
