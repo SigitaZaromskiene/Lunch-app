@@ -1,7 +1,8 @@
+import { ReactElement } from "react";
 import "./assets/App.scss";
-import Login from "./components/Pages/Login";
+import Login from "./components/Login/Login";
 
-const App: React.FC = () => {
+const App = (): ReactElement => {
   return (
     <div className="app_container">
       <Login />

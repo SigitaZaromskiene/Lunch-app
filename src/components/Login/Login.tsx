@@ -1,4 +1,4 @@
-import LoginRegisterForm from "../Reusable/LoginRegisterForm";
+import LoginRegisterForm from "../../containers/LoginRegisterForm/LoginRegisterForm";
 const Login: React.FC = () => {
   return <LoginRegisterForm />;
 };

@@ -2,8 +2,8 @@
 @import "./Variables.module.scss";
 
 .login-register-form {
-  background-color: #fff;
-  border: 1px solid #f7f7f7;
+  background-color: $w;
+  border: 1px solid $grey100;
   border-radius: $borderRadiusRegular;
   box-shadow: 2.4px 6.1px 8.6px -0.8px #8d8d8d33;
   height: 592px;
