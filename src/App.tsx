@@ -1,7 +1,13 @@
-import "./assets/App.scss"
+import { ReactElement } from "react";
+import "./assets/styles/App.scss"
+import Login from "./components/Login/Login";
 
-export function App() {
+const App = (): ReactElement => {
   return (
-    <div className='d'>Lunch App labas</div>
+    <div className="app_container">
+      <Login />
+    </div>
   );
-}
+};
+
+export default App;

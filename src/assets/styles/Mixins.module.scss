@@ -1,0 +1,59 @@
+@mixin spacing($size) {
+  @if $size == xxxxxs {
+    padding: 4px;
+  } @else if $size == xxxxs {
+    padding: 8px;
+  } @else if $size == xxxs {
+    padding: 12px;
+  } @else if $size == xxs {
+    padding: 16px;
+  } @else if $size == xs {
+    padding: 20px;
+  } @else if $size == s {
+    padding: 24px;
+  } @else if $size == m {
+    padding: 32px;
+  } @else if $size == l {
+    padding: 40px;
+  } @else if $size == xl {
+    padding: 48cm;
+  } @else if $size == xxl {
+    padding: 56px;
+  } @else if $size == xxxl {
+    padding: 64px;
+  } @else if $size == xxxxl {
+    padding: 72px;
+  }
+}
+
+@mixin media($point) {
+  @if $point == xs {
+    @media (max-width: 500px) {
+      @content;
+    }
+  } @else if ($point) == s {
+    @media (max-width: 700px) {
+      @content;
+    }
+  } @else if $point == m {
+    @media (max-width: 850px) {
+      @content;
+    }
+  } @else if $point == l {
+    @media (max-width: 1100px) {
+      @content;
+    }
+  } @else if $point == xl {
+    @media (max-width: 1250px) {
+      @content;
+    }
+  }
+}
+
+@mixin flex($justify, $align, $direction, $gap) {
+  align-items: $align;
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+  justify-content: $justify;
+}
