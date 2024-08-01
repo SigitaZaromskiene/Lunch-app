@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import "./assets/App.scss";
+import "./assets/styles/App.scss"
 import Login from "./components/Login/Login";
 
 const App = (): ReactElement => {

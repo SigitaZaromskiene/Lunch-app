@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import logo from "../../assets/img/logo.svg";
-import styles from "../../assets/styles/LoginRegisterForm.module.scss";
+import styles from "../../containers/LoginRegisterForm/LoginRegisterForm.module.scss"
 import classNames from "classnames/bind";
 
 const cx = classNames.bind(styles);
