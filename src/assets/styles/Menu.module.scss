@@ -1,0 +1,59 @@
+.menu-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+  width: 854px;
+}
+
+.menu-list__item {
+  background-color: white;
+  box-shadow: $strongShadow;
+  border-radius: $borderRadiusRegular;
+  width: 240px;
+  height: 250px;
+  list-style: none;
+  padding: 8px;
+  display: grid;
+  grid-template-rows: 1fr 1.5fr 0.8fr;
+
+  &__header {
+    @include flex(center, center, row, 15px);
+
+
+    &-img-container {
+      height: 80px;
+      width: 80px;
+      border-radius: 8px 20px 80px 20px;
+      padding: 28px 57px 28px 57px;
+      background: linear-gradient(to left, #f3cb97, #f2e3d0 100%);
+      display: flex; /* Use flexbox to center the image */
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-img {
+      height: 100%; /* Adjust to fill the container */
+      width: 100%; /* Adjust to fill the container */
+      border-radius: inherit; /* Inherit border radius from parent */
+    }
+
+    &-text {
+      @include flex(center, flex-start, column, 5px);
+      font-size: 13px;
+
+      padding: 16px 8px;
+
+      &-icon {
+        @include flex(flex-start, center, row, 5px);
+        &-veg path {
+          fill: green;
+        }
+        &-spicy path {
+          fill: red;
+        }
+      }
+    }
+  }
+}

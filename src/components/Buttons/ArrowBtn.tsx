@@ -14,7 +14,7 @@ const ArrowBtn: React.FC<ArrowBtnProps> = ({ fullNav, navWidthHandler }) => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <g clip-path="url(#clip0_822_1273)">
+          <g clipPath="url(#clip0_822_1273)">
             <path
               d="M15.41 7.41L14 6L8 12L14 18L15.41 16.59L10.83 12L15.41 7.41Z"
               fill="#0D1F2E"
