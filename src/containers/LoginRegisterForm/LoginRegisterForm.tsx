@@ -1,4 +1,6 @@
-import styles from "../../assets/styles/LoginRegisterForm.module.scss";
+import { ReactElement } from "react";
+import logo from "../../assets/img/logo.svg";
+import styles from "../../containers/LoginRegisterForm/LoginRegisterForm.module.scss"
 import classNames from "classnames/bind";
 import LogoHorizontal from "./LogoHorizontal";
 
@@ -6,7 +8,7 @@ import LogoHorizontal from "./LogoHorizontal";
 
 const cx = classNames.bind(styles);
 
-const LoginRegisterForm: React.FC = () => {
+const LoginRegisterForm = (): ReactElement => {
   return (
     <form className={cx("login-register-form")}>
       <div className="login-register-form__icon">

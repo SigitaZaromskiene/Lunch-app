@@ -3,7 +3,7 @@ import "./assets/App.scss";
 import Layout from "./components/Layout";
 import Nav from "./components/Nav";
 
-const App: React.FC = () => {
+const App = (): ReactElement => {
   return (
     <>
       <Layout>
