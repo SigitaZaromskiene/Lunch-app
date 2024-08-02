@@ -2,6 +2,9 @@ import { ReactElement } from "react";
 import logo from "../../assets/img/logo.svg";
 import styles from "../../containers/LoginRegisterForm/LoginRegisterForm.module.scss"
 import classNames from "classnames/bind";
+import LogoHorizontal from "./LogoHorizontal";
+
+// This component is not finished
 
 const cx = classNames.bind(styles);
 
@@ -9,7 +12,7 @@ const LoginRegisterForm = (): ReactElement => {
   return (
     <form className={cx("login-register-form")}>
       <div className="login-register-form__icon">
-        <img src={logo} alt="Logo of the page with app name and food bowl" />
+       <LogoHorizontal/>
       </div>
       <div className="login-register-form__buttons">
         <a href="#">LOGIN</a>
