@@ -1,9 +1,8 @@
-
 import "./assets/App.scss";
 import Layout from "./components/Layout";
 import Nav from "./components/Nav";
 
-const App = (): ReactElement => {
+const App: React.FC = () => {
   return (
     <>
       <Layout>
