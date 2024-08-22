@@ -4,6 +4,7 @@ import ArrowBtn from "../../containers/Buttons/ArrowBtn";
 import LogoVertical from "../../containers/Logo/LogoVertical";
 import { useState } from "react";
 
+
 const Nav: React.FC = () => {
   // might take this logic to useContext
   const [fullNav, setFullNav] = useState<boolean>(true);

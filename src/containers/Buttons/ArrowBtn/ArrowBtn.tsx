@@ -1,3 +1,10 @@
+import styles from "./ArrowBtn.module.scss"
+import classNames from "classnames/bind";
+
+const cx = classNames.bind (styles)
+
+
+
 type ArrowBtnProps = {
   fullNav: boolean;
   navWidthHandler(): void;
@@ -5,7 +12,7 @@ type ArrowBtnProps = {
 
 const ArrowBtn: React.FC<ArrowBtnProps> = ({ fullNav, navWidthHandler }) => {
   return (
-    <button className="arrow-btn" onClick={navWidthHandler}>
+    <button className={cx("arrow-btn")} onClick={navWidthHandler}>
       {fullNav ? (
         <svg
           width="28"
