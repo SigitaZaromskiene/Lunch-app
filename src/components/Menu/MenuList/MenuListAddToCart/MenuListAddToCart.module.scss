@@ -1,0 +1,15 @@
+.menu-list-item__add-to-cart {
+  @include flex(space-between, flex-end, center, 0);
+  padding: 0 1rem;
+
+  &__price {
+    &-title {
+      font-size: 0.7rem;
+      font-weight: $fontWeightRegular;
+    }
+
+    &-amount {
+      font-size: 1.1rem;
+    }
+  }
+}

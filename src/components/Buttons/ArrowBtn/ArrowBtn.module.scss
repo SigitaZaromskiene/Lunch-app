@@ -1,0 +1,19 @@
+.arrow-btn {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: (translate(-50%, 50%));
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: $secondary600;
+    cursor: pointer;
+  
+    svg {
+      @include flex(center, center, center, 0px);
+      padding: 5px;
+    }
+  
+    svg path {
+      fill: #ffffff;
+    }
+  }

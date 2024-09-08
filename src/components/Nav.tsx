@@ -1,6 +1,6 @@
 import LogoHorizontal from "./Reusable/LogoHorizontal";
-import NavBtn from "./Buttons/NavBtn";
-import ArrowBtn from "./Buttons/ArrowBtn";
+import NavBtn from "./Buttons/NavBtn/NavBtn";
+import ArrowBtn from "./Buttons/ArrowBtn/ArrowBtn";
 import LogoVertical from "./Reusable/LogoVertical";
 import { useState } from "react";
 

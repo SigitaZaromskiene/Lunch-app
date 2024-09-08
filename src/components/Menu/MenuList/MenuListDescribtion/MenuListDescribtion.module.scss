@@ -1,0 +1,33 @@
+.menu-list__item__description {
+  padding: 1rem;
+  @include flex(center, center, column, 0.5rem);
+  &-text {
+    font-weight: 300;
+    color: $grey400;
+    font-size: 0.9rem;
+    height: 5rem;
+    height: 50px;
+  }
+
+  &-rating {
+    width: 100%;
+    font-size: 0.8rem;
+    @include flex(space-between, center, row, 0);
+
+    &-container {
+      @include flex(center, center, row, 0);
+
+      &-more {
+        font-weight: 500;
+        font-size: 0.8rem;
+        cursor: pointer;
+      }
+
+      &-btn {
+        margin-left: 0.4rem;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+    }
+  }
+}

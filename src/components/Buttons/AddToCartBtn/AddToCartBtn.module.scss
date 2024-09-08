@@ -1,0 +1,21 @@
+.add-to-cart-btn {
+  border: 0.1rem solid $secondary300;
+  padding: 0.1rem 0.8rem;
+  border-radius: $borderRadiusRegular;
+  font-weight: $fontWeightMedium;
+  background-color: white;
+  cursor: pointer;
+  @include flex(center, center, row, 0.7rem);
+
+  &:hover {
+    background-color: $secondary200;
+    color: black;
+    border: 0.1rem solid $primary600;
+  }
+
+  span {
+    color: $secondary300;
+    font-size: 1.1rem;
+    font-weight: $fontWeightRegular;
+  }
+}

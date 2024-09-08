@@ -1,23 +1,26 @@
 import React from "react";
-import mealsData from "../../../data/db.json";
-import ramen from "../../assets/img/MenuListImg/Ramen.svg";
-import hamburger from "../../assets/img/MenuListImg/HamburgerFries.svg";
-import fries from "../../assets/img/MenuListImg/Fries.svg";
-import pizza from "../../assets/img/MenuListImg/Pizza.svg";
-import pretzel from "../../assets/img/MenuListImg/Pretzel.svg";
-import soup from "../../assets/img/MenuListImg/Soup.svg";
-import sandwich from "../../assets/img/MenuListImg/Sandwich.svg";
-import kebab from "../../assets/img/MenuListImg/Kebab.svg";
-import chicken from "../../assets/img/MenuListImg/Chicken.svg";
+import mealsData from "../../../../data/db.json";
+import ramen from "../../../assets/img/MenuListImg/Ramen.svg";
+import hamburger from "../../../assets/img/MenuListImg/HamburgerFries.svg";
+import fries from "../../../assets/img/MenuListImg/Fries.svg";
+import pizza from "../../../assets/img/MenuListImg/Pizza.svg";
+import pretzel from "../../../assets/img/MenuListImg/Pretzel.svg";
+import soup from "../../../assets/img/MenuListImg/Soup.svg";
+import sandwich from "../../../assets/img/MenuListImg/Sandwich.svg";
+import kebab from "../../../assets/img/MenuListImg/Kebab.svg";
+import chicken from "../../../assets/img/MenuListImg/Chicken.svg";
+import MenuListDescription from "./MenuListDescribtion";
+import MenuListAddToCart from "./MenuListAddToCart";
 
 const { meals } = mealsData;
 
-type Meal = {
+export type MealProps = {
   id: number;
   title: string;
   description: string;
   vegetarian: boolean;
   spicy: boolean;
+  price: number;
 };
 
 const selectMenuImg = (description: string): JSX.Element | null => {
@@ -39,7 +42,6 @@ const selectMenuImg = (description: string): JSX.Element | null => {
         />
       );
     case description.toLowerCase().includes("fries"):
-      console.log(fries);
       return (
         <img
           className="menu-list__item__header-img-container-img"
@@ -64,7 +66,6 @@ const selectMenuImg = (description: string): JSX.Element | null => {
         />
       );
     case description.toLowerCase().includes("soup"):
-      console.log("pizza case hit");
       return (
         <img
           className="menu-list__item__header-img-container-img"
@@ -104,12 +105,14 @@ const selectMenuImg = (description: string): JSX.Element | null => {
 const MenuHeader: React.FC = () => {
   return (
     <>
-      {meals.map((meal: Meal) => (
+      {meals.map((meal: MealProps) => (
         <li key={meal.id} className="menu-list__item">
           <div className="menu-list__item__header">
-            <div className="menu-list__item__header-img-container">
+            <div className="menu-list__item__header-image">
+              {" "}
               {selectMenuImg(meal.description)}
             </div>
+            <div className="menu-list__item__header-img-container"></div>
             <div className="menu-list__item__header-text">
               {meal.title}
               <div className="menu-list__item__header-text-icon">
@@ -148,7 +151,11 @@ const MenuHeader: React.FC = () => {
               </div>
             </div>
           </div>
-          <p>{meal.description}</p>
+          <MenuListDescription
+            description={meal.description}
+            mealId={meal.id}
+          />
+          <MenuListAddToCart price={meal.price} />
         </li>
       ))}
     </>
