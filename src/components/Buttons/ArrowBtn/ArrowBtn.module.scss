@@ -1,0 +1,14 @@
+@import '../../../assets/styles/Variables.module.scss';
+@import '../../../assets/styles/Mixins.module.scss';
+
+.arrow-btn {
+  background-color: $secondary600;
+  border: 2px solid $w;
+  border-radius: 0.6rem;
+  cursor: pointer;
+
+  svg {
+    @include flex(center, center, center, 0);
+    padding: 0.3rem;
+  }
+}

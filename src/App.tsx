@@ -1,12 +1,15 @@
-import { ReactElement } from "react";
-import "./assets/styles/App.scss"
-import Login from "./components/Login/Login";
+import './assets/App.scss';
+import Layout from './components/Layout';
+import Nav from './components/Nav';
+import { ReactElement } from 'react';
 
 const App = (): ReactElement => {
   return (
-    <div className="app_container">
-      <Login />
-    </div>
+    <>
+      <Layout>
+        <Nav />
+      </Layout>
+    </>
   );
 };
 

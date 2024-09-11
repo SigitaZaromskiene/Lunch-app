@@ -1,0 +1,60 @@
+.nav {
+  @include flex(flex-start, center, column, 50px);
+  background-color: $primary800;
+  border-bottom-right-radius: $borderRadiusRegular;
+  border-top-right-radius: $borderRadiusRegular;
+  height: 61rem;
+  padding: 1.9rem 0rem;
+  position: relative;
+  width: 16rem;
+
+  &__list {
+    @include flex(center, flex-start, column, 0.9rem);
+    padding: 1px;
+
+    &-icon path {
+      fill: #ffffff;
+    }
+
+    &-title {
+      text-align: center;
+    }
+    &-link {
+      background-color: $primary800;
+      border: none;
+      color: $w;
+      text-decoration: none;
+    }
+  }
+}
+.nav-colapsed {
+  @include flex(flex-start, center, column, 3.1rem);
+  background-color: $primary800;
+  border-bottom-right-radius: $borderRadiusRegular;
+  border-top-right-radius: $borderRadiusRegular;
+  height: 61rem;
+  padding: 1.9rem 1rem;
+  position: relative;
+  width: 4.5rem;
+
+  &__list {
+    @include flex(center, center, column, 1.3rem);
+
+    &-icon path {
+      fill: #ffffff;
+    }
+
+    &-link {
+      background-color: $primary800;
+      border: none;
+      color: $w;
+      text-decoration: none;
+    }
+  }
+}
+.arrow {
+  left: 100%;
+  position: absolute;
+  top: 50%;
+  transform: (translate(-50%, 50%));
+}

@@ -1,0 +1,9 @@
+@import '../../assets/styles/Variables.module.scss';
+
+.layout {
+  background-color: $grey100;
+  color: $textColorPrimary;
+  min-height: 100vh;
+  padding: 2.5rem 0;
+  width: 100%;
+}
