@@ -1,11 +1,11 @@
-import LogoHorizontal from "../../containers/Logo/LogoHorizontal";
-import NavBtn from "../../containers/Buttons/NavBtn";
-import ArrowBtn from "../../containers/Buttons/ArrowBtn";
-import LogoVertical from "../../containers/Logo/LogoVertical";
-import { useState } from "react";
+import LogoHorizontal from '../../containers/Logo/LogoHorizontal';
+import NavBtn from '../Buttons/NavBtn';
+import ArrowBtn from '../Buttons/ArrowBtn';
+import LogoVertical from '../../containers/Logo/LogoVertical';
+import { useState } from 'react';
+import { ReactElement } from 'react';
 
-
-const Nav: React.FC = () => {
+const Nav = (): ReactElement => {
   // might take this logic to useContext
   const [fullNav, setFullNav] = useState<boolean>(true);
 
@@ -14,10 +14,14 @@ const Nav: React.FC = () => {
   }
 
   return (
-    <nav className={fullNav ? "nav" : "nav-colapsed"}>
+    <nav className={fullNav ? 'nav' : 'nav-colapsed'}>
       {fullNav ? <LogoHorizontal /> : <LogoVertical />}
       <NavBtn fullNav={fullNav} />
-      <ArrowBtn fullNav={fullNav} navWidthHandler={navWidthHandler} />
+      <ArrowBtn
+        className="arrow"
+        fullNav={fullNav}
+        navWidthHandler={navWidthHandler}
+      />
     </nav>
   );
 };

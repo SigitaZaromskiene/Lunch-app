@@ -8,8 +8,8 @@ $fontWeightMedium: 500;
 $fontWeightRegular: 400;
 
 // Colors
-$w:#fff;
-$b:#000;
+$w: #fff;
+$b: #000;
 $primary800: #0d1f2e;
 $primary600: #143149;
 $primary400: #1a4264;
@@ -38,16 +38,13 @@ $yellow200: #ffefd0;
 
 // Color extras
 $orangeGradient: Orange;
+
 $modalOverlay: 15% Opacity#0D1F2E;
 
-$borderRadiusRegular: 8px;
-$borderRadiusLarge: 20px;
+$borderRadiusRegular: 0.5rem;
+$borderRadiusLarge: 1.26rem;
 
+$mediumShadow: 0.3px 0.8px 1.1px 0px #8d8d8d1c;
 
-$mediumShadow: 0.3px 0.8px 1.1px 0px #8D8D8D1C;
+$lightShadow: 2.4px 6.1px 8.6px -0.8px #8d8d8d33;
 
-// box-shadow: 1.1px 2.8px 3.9px -0.4px #8D8D8D29;
-
-$lightShadow: 2.4px 6.1px 8.6px -0.8px #8D8D8D33;
-
-// box-shadow: 5.3px 13.3px 18.8px -1.2px #C8C8C840;

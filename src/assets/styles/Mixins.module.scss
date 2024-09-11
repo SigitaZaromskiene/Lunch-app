@@ -10,7 +10,7 @@
   } @else if $size == xs {
     padding: 1.25rem;
   } @else if $size == s {
-    padding: 2rem;
+    padding: 1.5rem;
   } @else if $size == m {
     padding: 2rem;
   } @else if $size == l {
@@ -59,14 +59,13 @@
 }
 
 @mixin nav-btn-base {
-  border-radius: $borderRadiusRegular;
   background-color: $primary800;
   border: 2px solid transparent;
-  width: 100%;
+  border-radius: $borderRadiusRegular;
+  color: $w;
   cursor: pointer;
-  color: white;
   text-decoration: none;
-  
+  width: 100%;
 
   &:focus {
     background-color: $primary800;
