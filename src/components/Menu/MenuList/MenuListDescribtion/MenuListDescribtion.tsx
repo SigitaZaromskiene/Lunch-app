@@ -1,28 +1,8 @@
-import ratingsData from "../../../../../data/db.json";
+import { getMealRating } from "../../../../helpers/getMealRating";
+import styles from "./MenuListDescribtion.module.scss";
+import classNames from "classnames/bind";
 
-const { ratings } = ratingsData;
-
-type RatingProps = {
-  mealId: number;
-  rating: {
-    userId: number;
-    rating: number;
-    comment: string;
-  };
-};
-
-const getMealRating = (mealId: number): number => {
-  const mealRatings = ratings.filter(
-    (rating: RatingProps) => rating.mealId === mealId
-  );
-  if (mealRatings.length === 0) return 0;
-  const totalScore = mealRatings.reduce(
-    (sum: number, currentRating: RatingProps) =>
-      sum + currentRating.rating.rating,
-    0
-  );
-  return totalScore / mealRatings.length;
-};
+const cx = classNames.bind(styles);
 
 const cutDescriptionText = (description: string) => {
   if (description.length <= 50) {
@@ -43,18 +23,16 @@ const MenuListDescription = ({
   const shortText = cutDescriptionText(description);
 
   return (
-    <div className="menu-list__item__description">
-      <p className="menu-list__item__description-text">{shortText}</p>
-      <div className="menu-list__item__description-rating">
-        <div className="menu-list__item__description-rating-star">
+    <div className={cx("menu-list-description")}>
+      <p className="menu-list-description__text">{shortText}</p>
+      <div className="menu-list-description__rating">
+        <div className="menu-list-description__star">
           ★ {rating.toFixed(1)}
         </div>
-        <div className="menu-list__item__description-rating-container">
-          <p className="menu-list__item__description-rating-container-more">
+        <div className="menu-list-description__more-info">
+          <p className="menu-list-description__more-text">
             More Info{" "}
-            <span className="menu-list__item__description-rating-container-btn">
-              &#8594;
-            </span>
+            <span className="menu-list-description__btn">&#8594;</span>
           </p>
         </div>
       </div>

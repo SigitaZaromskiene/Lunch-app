@@ -1,14 +1,24 @@
+import { ReactElement } from "react";
 import AddToCartBtn from "../../../Buttons/AddToCartBtn";
+import styles from "./MenuListAddToCart.module.scss";
+import classNames from "classnames/bind";
 
-const MenuListAddToCart: React.FC<{ price: number }> = ({ price }) => {
+const cx = classNames.bind(styles);
+
+type MenuListAddToCartProps = {
+  price: number;
+};
+
+const MenuListAddToCart = ({ price }: MenuListAddToCartProps): ReactElement => {
   const addToCartHandler = () => {
     console.log("Added");
   };
+
   return (
-    <div className="menu-list-item__add-to-cart">
-      <div className="menu-list-item__add-to-cart__price">
-        <p className="menu-list-item__add-to-cart__price-title">Price</p>
-        <div className="menu-list-item__add-to-cart__price-amount">
+    <div className={cx("menu-list-add-to-cart")}>
+      <div className="menu-list-add-to-cart__price">
+        <p className="menu-list-add-to-cart__price-title">Price</p>
+        <div className="menu-list-add-to-cart__price-amount">
           &euro;{price.toString().replace(".", ",")}
         </div>
       </div>

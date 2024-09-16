@@ -1,4 +1,7 @@
-.menu-list-item__add-to-cart {
+@import "../../../../assets/styles/Mixins.module.scss";
+@import "../../../../assets/styles/Variables.module.scss";
+
+.menu-list-add-to-cart {
   @include flex(space-between, flex-end, center, 0);
   padding: 0 1rem;
 

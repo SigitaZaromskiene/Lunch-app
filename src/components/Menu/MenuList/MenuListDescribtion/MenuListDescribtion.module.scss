@@ -1,33 +1,35 @@
-.menu-list__item__description {
+@import "../../../../assets/styles/Mixins.module.scss";
+@import "../../../../assets/styles/Variables.module.scss";
+
+.menu-list-description {
+  @include flex(center, center, column, 1.1rem);
   padding: 1rem;
-  @include flex(center, center, column, 0.5rem);
-  &-text {
-    font-weight: 300;
+
+  &__text {
     color: $grey400;
     font-size: 0.9rem;
-    height: 5rem;
-    height: 50px;
+    font-weight: 300;
   }
 
-  &-rating {
-    width: 100%;
-    font-size: 0.8rem;
+  &__rating {
     @include flex(space-between, center, row, 0);
+    font-size: 0.8rem;
+    width: 100%;
+  }
 
-    &-container {
-      @include flex(center, center, row, 0);
+  &__more-info {
+    @include flex(center, center, row, 0);
+  }
 
-      &-more {
-        font-weight: 500;
-        font-size: 0.8rem;
-        cursor: pointer;
-      }
+  &__more-text {
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
 
-      &-btn {
-        margin-left: 0.4rem;
-        cursor: pointer;
-        font-size: 1rem;
-      }
-    }
+  &__btn {
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 0.4rem;
   }
 }

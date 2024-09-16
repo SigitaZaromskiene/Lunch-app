@@ -1,53 +1,54 @@
 .nav {
-  background-color: $primary800;
-  height: 978px;
-  width: 250px;
-  border-top-right-radius: $borderRadiusRegular;
-  border-bottom-right-radius: $borderRadiusRegular;
   @include flex(flex-start, center, column, 50px);
-  padding: 30px 0px;
+  background-color: $primary800;
+  border-bottom-right-radius: $borderRadiusRegular;
+  border-top-right-radius: $borderRadiusRegular;
+  height: 978px;
+  padding: 30px 0;
   position: relative;
+  width: 250px;
 
   &__list {
     @include flex(center, flex-start, column, 15px);
     padding: 1px;
 
     &-icon path {
-      fill: #ffffff;
+      fill: $w;
     }
 
     &-link {
-      color: #fff;
-      text-decoration: none;
-      font-size: 16px;
       background-color: $primary800;
       border: none;
+      color: $w;
+      font-size: 16px;
+      text-decoration: none;
     }
   }
 }
 .nav-colapsed {
-  background-color: $primary800;
-  height: 978px;
-  width: 72px;
-  border-top-right-radius: $borderRadiusRegular;
-  border-bottom-right-radius: $borderRadiusRegular;
   @include flex(flex-start, center, column, 50px);
-  padding: 30px 0px;
+  background-color: $primary800;
+  border-bottom-right-radius: $borderRadiusRegular;
+  border-top-right-radius: $borderRadiusRegular;
+  height: 978px;
+  padding: 30px 0;
   position: relative;
+  width: 72px;
+  
 
   &__list {
     @include flex(center, center, column, 20px);
 
     &-icon path {
-      fill: #ffffff;
+      fill: $w;
     }
 
     &-link {
-      color: #fff;
-      text-decoration: none;
-      font-size: 11px;
       background-color: $primary800;
       border: none;
+      color: $w;
+      font-size: 11px;
+      text-decoration: none;
     }
   }
 }

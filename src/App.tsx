@@ -1,15 +1,15 @@
-import React from "react";
-import "./assets/App.scss";
+import { ReactElement } from "react";
+import "./assets/App.scss"
 import Layout from "./components/Layout";
 import Nav from "./components/Nav";
-import MenuList from "./components/Menu/Menu";
+import MenuList from "./components/Menu";
 
-const App: React.FC = () => {
+const App = (): ReactElement => {
   return (
     <>
       <Layout>
         <Nav />
-        <MenuList/>
+        <MenuList />
       </Layout>
     </>
   );

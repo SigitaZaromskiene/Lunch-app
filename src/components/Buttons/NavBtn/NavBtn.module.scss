@@ -1,18 +1,18 @@
 .nav_btn__expanded {
   @include nav-btn-base;
   @include flex(flex-start, center, row, 20px);
-  padding: 6px 12px;
-  height: 40px;
   font-size: 16px;
+  height: 40px;
+  padding: 6px 12px;
 }
 
 .nav-btn__colapsed {
   @include nav-btn-base;
   @include flex(center, center, column, 5px);
-  padding: 1px;
   font-size: 12px;
-  width: 100%;
   height: 70px;
+  padding: 1px;
+  width: 100%;
 
   p {
     text-align: center;

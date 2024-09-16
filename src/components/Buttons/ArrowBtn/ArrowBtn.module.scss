@@ -1,19 +1,18 @@
+@import "../../../assets/styles/Mixins.module.scss";
+@import "../../../assets/styles/Variables.module.scss";
+
 .arrow-btn {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: (translate(-50%, 50%));
-    border: 2px solid white;
-    border-radius: 10px;
-    background-color: $secondary600;
-    cursor: pointer;
-  
-    svg {
-      @include flex(center, center, center, 0px);
-      padding: 5px;
-    }
-  
-    svg path {
-      fill: #ffffff;
-    }
+  background-color: $secondary600;
+  border: 2px solid $w;
+  border-radius: 0.6rem;
+  cursor: pointer;
+
+  svg {
+    @include flex(center, center, center, 0);
+    padding: 0.3rem;
   }
+
+  svg path {
+    fill: $w;
+  }
+}

@@ -1,10 +1,11 @@
-import LogoHorizontal from "./Reusable/LogoHorizontal";
-import NavBtn from "./Buttons/NavBtn/NavBtn";
-import ArrowBtn from "./Buttons/ArrowBtn/ArrowBtn";
-import LogoVertical from "./Reusable/LogoVertical";
+import { ReactElement } from "react";
+import LogoHorizontal from "../Logo/LogoHorizontal"
+import NavBtn from "../Buttons/NavBtn";
+import ArrowBtn from "../Buttons/ArrowBtn";
+import LogoVertical from "../Logo/LogoVertical";
 import { useState } from "react";
 
-const Nav: React.FC = () => {
+const Nav = (): ReactElement => {
   // might take this logic to useContext
   const [fullNav, setFullNav] = useState<boolean>(true);
 

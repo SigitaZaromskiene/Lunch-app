@@ -2,17 +2,14 @@
 @import "./styles/Variables.module.scss";
 @import "./styles/Mixins.module.scss";
 @import "./styles/TextStyles.module.scss";
-@import "./styles/LoginRegisterForm.module.scss";
-@import "./styles/Nav.module.scss";
+@import "../components/LoginRegisterForm/LoginRegisterForm.module.scss";
+@import "../components/Nav/Nav.module.scss";
+@import "../components/Buttons/AddToCartBtn/AddToCartBtn.module.scss";
 @import "../components/Buttons/ArrowBtn/ArrowBtn.module.scss";
 @import "../components/Buttons/NavBtn/NavBtn.module.scss";
-@import "./styles/Logo.module.scss";
-@import "./styles/Layout.module.scss";
+@import "../components/Logo/LogoHorizontal/LogoHorizontal.module.scss";
+@import "../components/Logo/LogoVertical/LogoVertical.module.scss";
+@import "../components/Layout/Layout.module.scss";
 @import "../components/Menu/MenuList/MenuList.module.scss";
 @import "../components/Menu/MenuList/MenuListDescribtion/MenuListDescribtion.module.scss";
 @import "../components/Menu/MenuList/MenuListAddToCart/MenuListAddToCart.module.scss";
-@import "../components/Buttons/AddToCartBtn/AddToCartBtn.module.scss";
-
-
-
-

@@ -1,16 +1,18 @@
+@import "../../../assets/styles/Mixins.module.scss";
+@import "../../../assets/styles/Variables.module.scss";
+
 .add-to-cart-btn {
-  border: 0.1rem solid $secondary300;
-  padding: 0.1rem 0.8rem;
-  border-radius: $borderRadiusRegular;
-  font-weight: $fontWeightMedium;
-  background-color: white;
-  cursor: pointer;
   @include flex(center, center, row, 0.7rem);
+  background-color: $w;
+  border: 0.1rem solid $secondary300;
+  border-radius: $borderRadiusRegular;
+  cursor: pointer;
+  font-weight: $fontWeightMedium;
+  padding: 0.1rem 0.8rem;
 
   &:hover {
     background-color: $secondary200;
-    color: black;
-    border: 0.1rem solid $primary600;
+    color: $b;
   }
 
   span {
