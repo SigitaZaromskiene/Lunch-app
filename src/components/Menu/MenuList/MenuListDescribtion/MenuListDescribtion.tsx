@@ -1,6 +1,6 @@
-import { getMealRating } from "../../../../helpers/getMealRating";
-import styles from "./MenuListDescribtion.module.scss";
-import classNames from "classnames/bind";
+import { getMealRating } from '../../../../helpers/getMealRating';
+import styles from './MenuListDescription.module.scss';
+import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
@@ -23,16 +23,17 @@ const MenuListDescription = ({
   const shortText = cutDescriptionText(description);
 
   return (
-    <div className={cx("menu-list-description")}>
-      <p className="menu-list-description__text">{shortText}</p>
-      <div className="menu-list-description__rating">
-        <div className="menu-list-description__star">
+    <div className={cx('menu-list-description')}>
+      <p className={cx('menu-list-description__text')}>{shortText}</p>
+      <div className={cx('menu-list-description__rating')}>
+        <div className={cx('menu-list-description__star')}>
           ★ {rating.toFixed(1)}
         </div>
-        <div className="menu-list-description__more-info">
-          <p className="menu-list-description__more-text">
-            More Info{" "}
-            <span className="menu-list-description__btn">&#8594;</span>
+        <div className={cx('menu-list-description__more-info')}>
+          <p className={cx('menu-list-description__more-text')}>
+            More Info{' '}
+            {/* will be btn later on */}
+            <span className={cx('menu-list-description__btn')}>&#8594;</span>
           </p>
         </div>
       </div>
