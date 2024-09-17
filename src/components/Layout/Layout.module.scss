@@ -1,11 +1,9 @@
-@import "../../assets/styles/Mixins.module.scss";
-@import "../../assets/styles/Variables.module.scss";
+@import '../../assets/styles/Variables.module.scss';
 
 .layout {
-  @include flex(center, flex-start, row, 3.75rem);
   background-color: $grey100;
   color: $textColorPrimary;
   min-height: 100vh;
-  padding: 30px 0;
+  padding: 2.5rem 0;
   width: 100%;
 }

@@ -1,24 +1,30 @@
-import styles from "./ArrowBtn.module.scss";
-import classNames from "classnames/bind";
-import arrowRight from "../../../assets/img/arrow-right.svg";
-import arrowLeft from "../../../assets/img/arrow-right.svg";
+import styles from './ArrowBtn.module.scss';
+import classNames from 'classnames/bind';
+import { ReactElement } from 'react';
+import arrowLeft from '../../../assets/img/arrow-left.svg';
+import arrowRight from '../../../assets/img/arrow-right.svg';
 
 const cx = classNames.bind(styles);
 
 type ArrowBtnProps = {
   fullNav: boolean;
   navWidthHandler: () => void;
+  className?: string;
 };
 
-const ArrowBtn: React.FC<ArrowBtnProps> = ({ fullNav, navWidthHandler }) => {
+const ArrowBtn = ({
+  fullNav,
+  navWidthHandler,
+  className,
+}: ArrowBtnProps): ReactElement => {
   return (
-    <button className={cx("arrow-btn")} onClick={navWidthHandler}>
+    <>
       {fullNav ? (
-        <img src={arrowLeft} alt="Arrow left icon" />
+        <img className={cx('arrow-btn', className)} onClick={navWidthHandler} src={arrowLeft} alt="Arrow left button" />
       ) : (
-        <img src={arrowRight} alt="Arrow right icon" />
+        <img className={cx('arrow-btn', className)} onClick={navWidthHandler} src={arrowRight} alt="Arrow right button" />
       )}
-    </button>
+    </>
   );
 };
 export default ArrowBtn;

@@ -1,1 +1,1 @@
-export {default} from "./LoginRegisterForm"
+export { default } from './LoginRegisterForm';

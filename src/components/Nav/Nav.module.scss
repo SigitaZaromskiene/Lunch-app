@@ -3,41 +3,42 @@
   background-color: $primary800;
   border-bottom-right-radius: $borderRadiusRegular;
   border-top-right-radius: $borderRadiusRegular;
-  height: 978px;
-  padding: 30px 0;
+  height: 61rem;
+  padding: 1.9rem 0rem;
   position: relative;
-  width: 250px;
+  width: 16rem;
 
   &__list {
-    @include flex(center, flex-start, column, 15px);
+    @include flex(center, flex-start, column, 0.9rem);
     padding: 1px;
 
     &-icon path {
       fill: $w;
     }
 
+    &-title {
+      text-align: center;
+    }
     &-link {
       background-color: $primary800;
       border: none;
       color: $w;
-      font-size: 16px;
       text-decoration: none;
     }
   }
 }
 .nav-colapsed {
-  @include flex(flex-start, center, column, 50px);
+  @include flex(flex-start, center, column, 3.1rem);
   background-color: $primary800;
   border-bottom-right-radius: $borderRadiusRegular;
   border-top-right-radius: $borderRadiusRegular;
-  height: 978px;
-  padding: 30px 0;
+  height: 61rem;
+  padding: 1.9rem 1rem;
   position: relative;
-  width: 72px;
-  
+  width: 4.5rem;
 
   &__list {
-    @include flex(center, center, column, 20px);
+    @include flex(center, center, column, 1.3rem);
 
     &-icon path {
       fill: $w;
@@ -47,8 +48,13 @@
       background-color: $primary800;
       border: none;
       color: $w;
-      font-size: 11px;
       text-decoration: none;
     }
   }
+}
+.arrow {
+  left: 100%;
+  position: absolute;
+  top: 50%;
+  transform: (translate(-50%, 50%));
 }

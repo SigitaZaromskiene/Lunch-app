@@ -1,22 +1,16 @@
-.nav_btn__expanded {
+.nav-btn__expanded {
   @include nav-btn-base;
-  @include flex(flex-start, center, row, 20px);
-  font-size: 16px;
-  height: 40px;
-  padding: 6px 12px;
+  @include flex(flex-start, center, row, 1.25rem);
+  font-size: 1rem;
+  height: 2.5rem;
+  padding: 0.4rem 0.8rem;
 }
 
-.nav-btn__colapsed {
+.nav-btn__collapsed {
   @include nav-btn-base;
-  @include flex(center, center, column, 5px);
-  font-size: 12px;
-  height: 70px;
-  padding: 1px;
+  @include flex(center, center, column, 0.3rem);
+  font-size: 0.8rem;
+  height: 4.4rem;
+  padding: 0.1rem;
   width: 100%;
-
-  p {
-    text-align: center;
-  }
 }
-
-

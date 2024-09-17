@@ -9,7 +9,7 @@ type LayoutProps = {
 };
 
 const Layout = ({ children }: LayoutProps): ReactElement => {
-  return <div className={cx("layout")}>{children}</div>;
+  return <div className={cx('layout')}>{children}</div>;
 };
 
 export default Layout;
