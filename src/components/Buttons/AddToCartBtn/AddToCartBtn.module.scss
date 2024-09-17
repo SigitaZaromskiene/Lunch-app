@@ -1,5 +1,5 @@
-@import "../../../assets/styles/Mixins.module.scss";
-@import "../../../assets/styles/Variables.module.scss";
+@import '../../../assets/styles/Mixins.module.scss';
+@import '../../../assets/styles/Variables.module.scss';
 
 .add-to-cart-btn {
   @include flex(center, center, row, 0.7rem);
