@@ -1,0 +1,28 @@
+@import '../../assets/styles/Mixins.module.scss';
+@import '../../assets/styles/Variables.module.scss';
+
+.header {
+  @include flex(flex start, align-items, column, 1rem);
+  min-width: 100%;
+
+  &__secondary {
+    margin-top: 1rem;
+    font-weight: $fontWeightMedium;
+    margin-bottom: 2.5rem;
+  }
+  &__list {
+    @include flex(flex start, align-items, row, 2rem);
+    list-style: none;
+  }
+  &__button {
+    border: none;
+    font-size: 0.9rem;
+    font-weight: $fontWeightMedium;
+    background-color: transparent;
+    color: $grey400;
+    cursor: pointer;
+  }
+  &__border{
+    border-bottom : 0.1rem solid $grey400;
+  }
+}
