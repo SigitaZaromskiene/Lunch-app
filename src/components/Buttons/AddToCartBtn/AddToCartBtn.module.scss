@@ -3,7 +3,7 @@
 
 .add-to-cart-btn {
   @include flex(center, center, row, 0.7rem);
-  background-color: $w;
+  background-color: $white;
   border: 0.1rem solid $secondary300;
   border-radius: $borderRadiusRegular;
   cursor: pointer;
@@ -12,10 +12,15 @@
 
   &:hover {
     background-color: $secondary200;
-    color: $b;
+    color: $black;
   }
 
-  span {
+  &:active {
+    background-color: $secondary300;
+    border: 0.1rem solid $black;
+  }
+
+  &__plus {
     color: $secondary300;
     font-size: 1.1rem;
     font-weight: $fontWeightRegular;

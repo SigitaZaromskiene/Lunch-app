@@ -1,12 +1,12 @@
 .login-register-form {
-  @include flex(center, flex-start, column, 25px);
+  @include flex(center, flex-start, column, 1.5rem);
   @include spacing(s);
-  background-color: $w;
+  background-color: $white;
   border: 1px solid #f7f7f7;
   border-radius: $borderRadiusRegular;
   box-shadow: 2.4px 6.1px 8.6px -0.8px #8d8d8d33;
-  height: 592px;
-  width: 391px;
+  height: 37rem;
+  width: 24.5rem;
 
   &__icon {
     display: flex;
@@ -15,11 +15,11 @@
   }
 
   &__buttons {
-    @include flex(center, flex-start, row, 25px);
+    @include flex(center, flex-start, row, 1.5rem);
     color: $textColorSecondary;
   }
   &__border {
-    @include flex(center, center, column, 25px);
+    @include flex(center, center, column, 1.5rem);
     border-bottom: 1px solid $grey300;
     width: 100%;
   }

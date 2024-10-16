@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const Menu = (): ReactElement => {
   return (
-    <ul className={cx("menu-container")}>
+    <ul className={cx("menu")}>
       <MenuList />
     </ul>
   );

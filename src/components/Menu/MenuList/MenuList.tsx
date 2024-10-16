@@ -12,9 +12,10 @@ const cx = classNames.bind(styles);
 
 const { meals } = mealsData;
 
-export type MealProps = {
+type MealProps = {
   id: number;
   title: string;
+  dishType: string;
   description: string;
   vegetarian: boolean;
   spicy: boolean;
@@ -26,21 +27,23 @@ const MenuHeader = (): ReactElement => {
     <>
       {meals.map((meal: MealProps) => (
         <li key={meal.id} className={cx('menu-list')}>
-          <div className={cx('menu-list-header')}>
-            <div className={cx('menu-list-header__image')}>
-              {selectMenuImg(meal.title)}
+          <div className={cx('menu-list__header')}>
+            <div className={cx('menu-list__image')}>
+              {selectMenuImg(meal.dishType)}
             </div>
-            <div className={cx('menu-list-header__img-container')}></div>
-            <h1 className={cx('menu-list-header__text')}>
+            <div className={cx('menu-list__container')}></div>
+            <div className={cx('menu-list__text')}>
               {meal.title}
-              <div className={cx('menu-list-header__text-icon')}>
+              <div className={cx('menu-list__text-icon')}>
                 {meal.vegetarian && (
                   <img src={veggetarianIcon} alt="Vegetarian food icon" />
                 )}
                 {meal.spicy && <img src={spicyIcon} alt="Spicy food icon" />}
-                {!meal.spicy && !meal.vegetarian && <p>&nbsp;</p>}
+                {!meal.spicy && !meal.vegetarian && (
+                  <div className={cx('menu-list__empty-space')}></div>
+                )}
               </div>
-            </h1>
+            </div>
           </div>
           <MenuListDescription
             description={meal.description}

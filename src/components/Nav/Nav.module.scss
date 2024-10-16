@@ -13,7 +13,7 @@
     padding: 1px;
 
     &-icon path {
-      fill: $w;
+      fill: $white;
     }
 
     &-title {
@@ -22,7 +22,7 @@
     &-link {
       background-color: $primary800;
       border: none;
-      color: $w;
+      color: $white;
       text-decoration: none;
     }
   }
@@ -43,13 +43,13 @@
  
 
     &-icon path {
-      fill: $w;
+      fill: $white;
     }
 
     &-link {
       background-color: $primary800;
       border: none;
-      color: $w;
+      color: $white;
       text-decoration: none;
     }
   }

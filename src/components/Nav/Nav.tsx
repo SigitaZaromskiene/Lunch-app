@@ -1,7 +1,6 @@
-import LogoHorizontal from '../../containers/Logo/LogoHorizontal';
+import Logo from '../Logo';
 import NavBtn from '../Buttons/NavBtn';
 import ArrowBtn from '../Buttons/ArrowBtn';
-import LogoVertical from '../../containers/Logo/LogoVertical';
 import { useState, ReactElement } from 'react';
 
 const Nav = (): ReactElement => {
@@ -13,7 +12,7 @@ const Nav = (): ReactElement => {
 
   return (
     <nav className={fullNav ? 'nav' : 'nav-collapsed'}>
-      {fullNav ? <LogoHorizontal /> : <LogoVertical />}
+      <Logo isVertical={fullNav} />
       <NavBtn fullNav={fullNav} />
       <ArrowBtn
         className="arrow"

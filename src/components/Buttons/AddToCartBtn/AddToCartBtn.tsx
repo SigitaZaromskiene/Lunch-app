@@ -1,17 +1,17 @@
-import { ReactElement } from "react";
-import styles from "./AddToCartBtn.module.scss";
-import classNames from "classnames/bind";
+import { ReactElement } from 'react';
+import styles from './AddToCartBtn.module.scss';
+import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
 type AddToCartProps = {
-  addToCartHandler: () => void;
+  onClick: () => void;
 };
 
-const AddToCartBtn = ({ addToCartHandler }: AddToCartProps): ReactElement => {
+const AddToCartBtn = ({ onClick }: AddToCartProps): ReactElement => {
   return (
-    <button className={cx("add-to-cart-btn")} onClick={addToCartHandler}>
-      <span>+</span>Add to cart
+    <button className={cx('add-to-cart-btn')} onClick={onClick}>
+      <span className={cx('add-to-cart-btn__plus')}>&#43;</span>Add to cart
     </button>
   );
 };

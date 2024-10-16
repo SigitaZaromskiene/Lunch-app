@@ -3,12 +3,17 @@
 
 .menu-list-description {
   @include flex(center, center, column, 1.1rem);
-  padding: 1rem;
+  @include spacing(xxs);
 
   &__text {
     color: $grey400;
     font-size: 0.9rem;
-    font-weight: 300;
+    display: -webkit-box;             
+    -webkit-line-clamp: 2;            
+    -webkit-box-orient: vertical;     
+    overflow: hidden;                 
+    text-overflow: ellipsis;          
+    width: 14rem;                     
   }
 
   &__rating {

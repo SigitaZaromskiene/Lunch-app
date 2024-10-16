@@ -3,7 +3,7 @@
 
 .arrow-btn {
   background-color: $secondary600;
-  border: 2px solid $w;
+  border: 2px solid $white;
   border-radius: 0.6rem;
   cursor: pointer;
 
@@ -13,6 +13,6 @@
   }
 
   svg path {
-    fill: $w;
+    fill: $white;
   }
 }

@@ -1,70 +1,71 @@
-@import "../../../assets/styles/Mixins.module.scss";
-@import "../../../assets/styles/Variables.module.scss";
+@import '../../../assets/styles/Mixins.module.scss';
+@import '../../../assets/styles/Variables.module.scss';
 
 .menu-list {
   align-items: center;
-  background-color: $w;
+  background-color: $white;
   border-radius: $borderRadiusRegular;
   box-shadow: $strongShadow;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  height: 17rem;
+  grid-template-rows: repeat(3, 1fr);
+  height: 18rem;
   justify-content: center;
   list-style: none;
   position: relative;
   width: 16rem;
 
-  &-header {
-    @include flex(flex-start, center, row, 2.5rem);
-    height: 5rem;
+  &__image {
+    margin-left: -0.6rem;
+    width: 30%;
+    z-index: 100;
+  }
 
-    &__image {
-      margin-left: -0.5rem;
-      width: 30%;
-      z-index: 100;
-    }
+  &__header {
+    @include flex(flex-start, center, row, 3rem);
+    position: relative;
+    height: 6rem;
+  }
+  &__container {
+    @include spacing(xl);
+    align-items: center;
+    background: linear-gradient(to left, #f3cb97, #f2e3d0 100%);
+    border-radius: 0.5rem 1.25rem 5rem;
+    box-shadow: $strongShadow;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: -0.6rem;
 
-    &__img-container {
+    // &-img {
+    //   height: 5.2rem;
+    //   object-fit: cover;
+    //   width: 4rem;
+    // }
+  }
+
+  &__empty-space {
+    min-height: 2rem;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 0.5rem;
+    font-size: 0.85rem;
+    font-weight: $fontWeightMedium;
+
+    &-icon {
       align-items: center;
-      background: linear-gradient(to left, #f3cb97, #f2e3d0 100%);
-      border-radius: 0.5rem 1.25rem 5rem 1.25rem;
-      box-shadow: $strongShadow;
       display: flex;
-      height: 6rem;
-      justify-content: center;
-      left: -0.6rem;
-      position: absolute;
-      top: -0.6rem;
-      width: 6rem;
+      gap: 0.3rem;
 
-      &-img {
-        height: 5.6rem;
-        object-fit: cover;
-        width: 5rem;
+      &-veg path {
+        fill: green;
       }
-    }
 
-    &__text {
-      display: flex;
-      flex-direction: column;
-      font-size: 0.9rem;
-      font-weight: $fontWeightMedium;
-      justify-content: center;
-      margin-top: 1.5rem;
-      width: 8rem;
-
-      &-icon {
-        align-items: center;
-        display: flex;
-        gap: 0.3rem;
-
-        &-veg path {
-          fill: green;
-        }
-
-        &-spicy path {
-          fill: red;
-        }
+      &-spicy path {
+        fill: red;
       }
     }
   }

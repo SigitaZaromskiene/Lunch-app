@@ -9,7 +9,7 @@ type RatingProps = {
   };
 };
 
-export const getMealRating = (mealId: number): number => {
+export const getAverageMealRating = (mealId: number): number => {
   const mealRatings = ratingsData.ratings.filter(
     (rating: RatingProps) => rating.mealId === mealId
   );

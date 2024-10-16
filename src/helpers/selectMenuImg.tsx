@@ -8,78 +8,78 @@ import sandwich from "../assets/img/MenuListImg/Sandwich.svg";
 import kebab from "../assets/img/MenuListImg/Kebab.svg";
 import chicken from "../assets/img/MenuListImg/Chicken.svg";
 
-export const selectMenuImg = (title: string): JSX.Element | null => {
+export const selectMenuImg = (dishType: string): JSX.Element | null => {
   switch (true) {
-    case title.toLowerCase().includes("bowl"):
+    case dishType ==="bowl":
       return (
         <img
-          className="menu-list__item__header-img-container-img"
+          className="menu-list__image"
           src={ramen}
-          alt={title}
+          alt={dishType}
         />
       );
-    case title.toLowerCase().includes("hamburger"):
+    case dishType ==="hamburger":
       return (
         <img
-          className="menu-list__item__header-img-container-img"
+          className="menu-list__image"
           src={hamburger}
-          alt={title}
+          alt={dishType}
         />
       );
-    case title.toLowerCase().includes("fries"):
+    case dishType ==="fries":
       return (
         <img
-          className="menu-list__item__header-img-container-img"
+          className="menu-list__image"
           src={fries}
-          alt={title}
+          alt={dishType}
         />
       );
-    case title.toLowerCase().includes("pizza"):
+    case dishType ==="pizza":
       return (
         <img
-          className="menu-list__item__header-img-container-img"
+          className="menu-list__image"
           src={pizza}
-          alt={title}
+          alt={dishType}
         />
       );
-    case title.toLowerCase().includes("pretzel"):
+    case dishType ==="pretzel":
       return (
         <img
-          className="menu-list__item__header-img-container-img"
+          className="menu-list-header__img"
           src={pretzel}
-          alt={title}
+          alt={dishType}
         />
       );
-    case title.toLowerCase().includes("soup"):
+    case dishType ==="soup":
       return (
         <img
-          className="menu-list__item__header-img-container-img"
+          className="menu-list__image"
           src={soup}
-          alt={title}
+          alt={dishType}
         />
       );
-    case title.toLowerCase().includes("sandwich"):
+    case dishType ==="sandwich":
       return (
         <img
-          className="menu-list__item__header-img"
+          className="menu-list__image"
           src={sandwich}
-          alt={title}
+          alt={dishType}
         />
       );
-    case title.toLowerCase().includes("wrap"):
+    case dishType ==="wrap":
       return (
         <img
-          className="menu-list__item__header-img-container-img"
+          className="menu-list__image"
           src={kebab}
-          alt={title}
+          alt={dishType}
         />
       );
-    case title.toLowerCase().includes("chicken"):
+    case dishType ==="chicken":
       return (
         <img
-          className="menu-list__item__header-img-container-img"
+          className="menu-list__image"
           src={chicken}
-          alt={title}
+          alt={dishType}
         />
       );
     default:

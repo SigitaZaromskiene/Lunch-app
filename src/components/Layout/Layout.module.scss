@@ -3,6 +3,7 @@
 
 .layout {
   @include flex(flex-start,flex-start,row, 2rem);
+  
   background-color: $grey100;
   color: $textColorPrimary;
   min-height: 100vh;
