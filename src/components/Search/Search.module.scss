@@ -1,0 +1,131 @@
+@import '../../assets/styles/Mixins.module.scss';
+@import '../../assets/styles/Variables.module.scss';
+
+.search {
+  width: 100%;
+  @include flex(center, center, column, 0);
+  background-color: $white;
+  box-shadow: $mediumShadow;
+  border-radius: $borderRadiusRegular;
+
+  &__form {
+    @include flex(space-between, flex-end, row, 1rem);
+    @include spacing(s);
+    width: 100%;
+  }
+
+  &__input {
+    width: 18rem;
+    height: 2rem;
+    border-radius: $borderRadiusRegular;
+    border: 1px solid $grey300;
+
+    &::placeholder {
+      color: $grey400;
+      font-size: 0.8rem;
+    }
+  }
+
+  &__label {
+    font-size: 0.8rem;
+  }
+
+  &__button {
+    @include flex(center, flex-start, row, 1rem);
+    font-weight: $fontWeightMedium;
+  }
+
+  &__options {
+    @include flex(space-between, flex-start, column, 0.5rem);
+    font-weight: $fontWeightMedium;
+  }
+
+  &__btn {
+    color: $white;
+    background-color: $primary800;
+    padding: 0.4rem 1rem;
+    font-size: 1rem;
+    font-weight: $fontWeightMedium;
+    border-radius: $borderRadiusRegular;
+    border: 0.1rem solid $primary800;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $primary600;
+      border: 0.1rem solid $primary600;
+    }
+
+    &:active {
+      background-color: $primary400;
+      border: 0.1rem solid $primary400;
+    }
+  }
+  &__border {
+    border-bottom: 1px solid $grey200;
+    width: 95%;
+  }
+
+  &__select {
+    width: 18rem;
+    height: 2rem;
+    border-radius: $borderRadiusRegular;
+    border: 1px solid $grey300;
+    color: $grey400;
+    font-size: 0.8rem;
+    padding: 0.4rem;
+    padding-right: 2rem;
+    background-color: $white;
+    background-image: url('../../assets/img/down.svg');
+    background-repeat: no-repeat;
+    background-position: right 0.7rem center;
+    appearance: none;
+
+    // cannot use class in this case
+    option {
+      color: $grey300;
+    }
+  }
+
+  &__sort {
+    @include flex(flex-start, center, row, 1.5rem);
+    @include spacing(s);
+    width: 100%;
+
+    &-text {
+      font-size: 0.8rem;
+      font-weight: $fontWeightRegular;
+    }
+    &-buttons {
+      @include flex(flex-start, center, row, 1.5rem);
+      list-style: none;
+    }
+    &-button {
+      @include spacing(xxxs);
+      background-color: transparent;
+      border: 0.1rem solid transparent;
+      border-radius: $borderRadiusRegular;
+      cursor: pointer;
+      font-size: 0.7rem;
+      font-weight: $fontWeightMedium;
+      padding: 0.2rem 0.9rem;
+
+      &:hover {
+        background-color: $secondary100;
+        border: 0.1rem solid $secondary300;
+      }
+
+      &:active {
+        background-color: $secondary200;
+        border: 0.1rem solid $secondary300;
+      }
+    }
+  }
+
+  .searchIcon {
+    padding-left: 2rem;
+    background-image: url('../../assets/img/Vector.svg');
+    background-size: 1rem 1rem;
+    background-position: 0.5rem center;
+    background-repeat: no-repeat;
+  }
+}
