@@ -1,5 +1,5 @@
-import LoginRegisterForm from '../../components/LoginRegisterForm';
-import { ReactElement } from 'react';
+import { ReactElement } from "react";
+import LoginRegisterForm from "../../components/LoginRegisterForm";
 
 const Login = (): ReactElement => {
   return <LoginRegisterForm />;

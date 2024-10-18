@@ -1,12 +1,9 @@
-import LogoHorizontal from '../../containers/Logo/LogoHorizontal';
+import Logo from '../Logo';
 import NavBtn from '../Buttons/NavBtn';
 import ArrowBtn from '../Buttons/ArrowBtn';
-import LogoVertical from '../../containers/Logo/LogoVertical';
-import { useState } from 'react';
-import { ReactElement } from 'react';
+import { useState, ReactElement } from 'react';
 
 const Nav = (): ReactElement => {
-  // might take this logic to useContext
   const [fullNav, setFullNav] = useState<boolean>(true);
 
   function navWidthHandler() {
@@ -14,8 +11,8 @@ const Nav = (): ReactElement => {
   }
 
   return (
-    <nav className={fullNav ? 'nav' : 'nav-colapsed'}>
-      {fullNav ? <LogoHorizontal /> : <LogoVertical />}
+    <nav className={fullNav ? 'nav' : 'nav-collapsed'}>
+      <Logo isVertical={fullNav} />
       <NavBtn fullNav={fullNav} />
       <ArrowBtn
         className="arrow"

@@ -1,5 +1,4 @@
 import { ReactElement } from 'react';
-import logo from '../../assets/img/logo.svg';
 import styles from '../../containers/LoginRegisterForm/LoginRegisterForm.module.scss';
 import classNames from 'classnames/bind';
 import LogoHorizontal from '../../containers/Logo/LogoHorizontal';

@@ -1,0 +1,72 @@
+@import '../../../assets/styles/Mixins.module.scss';
+@import '../../../assets/styles/Variables.module.scss';
+
+.menu-list {
+  align-items: center;
+  background-color: $white;
+  border-radius: $borderRadiusRegular;
+  box-shadow: $strongShadow;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  height: 18rem;
+  justify-content: center;
+  list-style: none;
+  position: relative;
+  width: 16rem;
+
+  &__image {
+    margin-left: -0.6rem;
+    width: 30%;
+    z-index: 100;
+  }
+
+  &__header {
+    @include flex(flex-start, center, row, 3rem);
+    position: relative;
+    height: 6rem;
+  }
+  &__container {
+    @include spacing(xl);
+    align-items: center;
+    background: linear-gradient(to left, #f3cb97, #f2e3d0 100%);
+    border-radius: 0.5rem 1.25rem 5rem;
+    box-shadow: $strongShadow;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: -0.6rem;
+
+    // &-img {
+    //   height: 5.2rem;
+    //   object-fit: cover;
+    //   width: 4rem;
+    // }
+  }
+
+  &__empty-space {
+    min-height: 2rem;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 0.5rem;
+    font-size: 0.85rem;
+    font-weight: $fontWeightMedium;
+
+    &-icon {
+      align-items: center;
+      display: flex;
+      gap: 0.3rem;
+
+      &-veg path {
+        fill: green;
+      }
+
+      &-spicy path {
+        fill: red;
+      }
+    }
+  }
+}

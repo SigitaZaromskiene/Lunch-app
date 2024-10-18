@@ -1,0 +1,28 @@
+@import '../../../assets/styles/Mixins.module.scss';
+@import '../../../assets/styles/Variables.module.scss';
+
+.add-to-cart-btn {
+  @include flex(center, center, row, 0.7rem);
+  background-color: $white;
+  border: 0.1rem solid $secondary300;
+  border-radius: $borderRadiusRegular;
+  cursor: pointer;
+  font-weight: $fontWeightMedium;
+  padding: 0.1rem 0.8rem;
+
+  &:hover {
+    background-color: $secondary200;
+    color: $black;
+  }
+
+  &:active {
+    background-color: $secondary300;
+    border: 0.1rem solid $black;
+  }
+
+  &__plus {
+    color: $secondary300;
+    font-size: 1.1rem;
+    font-weight: $fontWeightRegular;
+  }
+}

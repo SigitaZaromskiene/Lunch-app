@@ -1,6 +1,6 @@
-import styles from './Layout.module.scss';
-import classNames from 'classnames/bind';
-import { ReactNode, ReactElement } from 'react';
+import { ReactElement, ReactNode } from "react";
+import styles from "./Layout.module.scss";
+import classNames from "classnames/bind";
 
 const cx = classNames.bind(styles);
 

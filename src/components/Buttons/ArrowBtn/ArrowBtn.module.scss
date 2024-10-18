@@ -3,12 +3,16 @@
 
 .arrow-btn {
   background-color: $secondary600;
-  border: 2px solid $w;
+  border: 2px solid $white;
   border-radius: 0.6rem;
   cursor: pointer;
 
   svg {
     @include flex(center, center, center, 0);
     padding: 0.3rem;
+  }
+
+  svg path {
+    fill: $white;
   }
 }

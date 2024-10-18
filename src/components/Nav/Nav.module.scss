@@ -13,7 +13,7 @@
     padding: 1px;
 
     &-icon path {
-      fill: #ffffff;
+      fill: $white;
     }
 
     &-title {
@@ -22,12 +22,12 @@
     &-link {
       background-color: $primary800;
       border: none;
-      color: $w;
+      color: $white;
       text-decoration: none;
     }
   }
 }
-.nav-colapsed {
+.nav-collapsed {
   @include flex(flex-start, center, column, 3.1rem);
   background-color: $primary800;
   border-bottom-right-radius: $borderRadiusRegular;
@@ -36,18 +36,20 @@
   padding: 1.9rem 1rem;
   position: relative;
   width: 4.5rem;
+  
 
   &__list {
     @include flex(center, center, column, 1.3rem);
+ 
 
     &-icon path {
-      fill: #ffffff;
+      fill: $white;
     }
 
     &-link {
       background-color: $primary800;
       border: none;
-      color: $w;
+      color: $white;
       text-decoration: none;
     }
   }
