@@ -11,13 +11,12 @@
   padding: 0.1rem 0.8rem;
 
   &:hover {
-    background-color: $secondary200;
-    color: $black;
+    background-color: $secondary100;
   }
 
   &:active {
-    background-color: $secondary300;
-    border: 0.1rem solid $black;
+    background-color: $secondary200;
+
   }
 
   &__plus {

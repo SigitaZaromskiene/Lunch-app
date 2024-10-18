@@ -1,4 +1,4 @@
-import ratingsData from "../../data/db.json";
+import ratingsData from '../../data/db.json';
 
 type RatingProps = {
   mealId: number;

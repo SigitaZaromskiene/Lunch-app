@@ -1,0 +1,51 @@
+@import '../../assets/styles/Mixins.module.scss';
+@import '../../assets/styles/Variables.module.scss';
+
+.header {
+  @include flex(flex-start, align-items, column, 1rem);
+  min-width: 100%;
+
+  &__secondary {
+    margin-top: 1rem;
+    font-weight: $fontWeightMedium;
+    margin-bottom: 2.5rem;
+  }
+
+  &__list {
+    @include flex(flex-start, align-items, row, 2rem);
+    list-style: none;
+    border-bottom: 2px solid #c8c8c8;
+    padding: 0.5rem;
+  }
+
+  &__button {
+    border: none;
+    font-size: 0.9rem;
+    font-weight: $fontWeightMedium;
+    background-color: transparent;
+    color: #8d8d8d;
+    cursor: pointer;
+    padding: 0 0.5rem;
+    position: relative;
+    box-sizing: border-box;
+
+    &:hover {
+      color: $primary600;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      width: 100%;
+      height: 2px;
+      background-color: transparent;
+      transition: background-color 0.3s ease;
+    }
+
+    &:hover::after {
+      background-color: #e26a00;
+    }
+  }
+}

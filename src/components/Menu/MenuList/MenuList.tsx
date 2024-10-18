@@ -1,5 +1,4 @@
 import { ReactElement } from 'react';
-import mealsData from '../../../../data/db.json';
 import { selectMenuImg } from '../../../helpers/selectMenuImg';
 import MenuListDescription from './MenuListDescribtion';
 import MenuListAddToCart from './MenuListAddToCart';
@@ -9,8 +8,6 @@ import styles from './MenuList.module.scss';
 import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
-
-const { meals } = mealsData;
 
 type MealProps = {
   id: number;
@@ -22,10 +19,16 @@ type MealProps = {
   price: number;
 };
 
-const MenuHeader = (): ReactElement => {
+type FilteredMealsProps = {
+  filteredMeals: MealProps[];
+};
+
+const MenuHeader = ({ filteredMeals }: FilteredMealsProps): ReactElement => {
   return (
     <>
-      {meals.map((meal: MealProps) => (
+      {' '}
+      {filteredMeals.length == 0 && <p>Nothing found in this shop.</p>}
+      {filteredMeals.map((meal: MealProps) => (
         <li key={meal.id} className={cx('menu-list')}>
           <div className={cx('menu-list__header')}>
             <div className={cx('menu-list__image')}>

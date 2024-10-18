@@ -1,8 +1,14 @@
+@import '../../assets/styles/Mixins.module.scss';
+@import '../../assets/styles/Variables.module.scss';
+
+.main {
+  @include flex(flex-start, center, column, 2rem);
+}
+
 .menu {
   column-gap: 1rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   row-gap: 2rem;
-  width: 54rem;
 }
