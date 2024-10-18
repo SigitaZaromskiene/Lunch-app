@@ -3,9 +3,9 @@ import MenuList from './MenuList';
 import styles from './Menu.module.scss';
 import classNames from 'classnames/bind';
 import Header from '../Header';
-import Search from '../Search';
 import { useState } from 'react';
 import data from '../../../data/db.json';
+import SearchMenu from '../SearchMenu';
 
 const cx = classNames.bind(styles);
 const meals = data.meals;
@@ -17,13 +17,14 @@ const Menu = (): ReactElement => {
 
   return (
     <div className={cx('main')}>
-      <Header />
-      <Search
+      <Header setFilteredMeals={setFilteredMeals} />
+      <SearchMenu
         selectedVendor={selectedVendor}
         setSelectedVendor={setSelectedVendor}
         searchItem={searchItem}
         setSearchItem={setSearchItem}
         setFilteredMeals={setFilteredMeals}
+        filteredMeals={filteredMeals}
       />
       <div className={cx('menu')}>
         <MenuList filteredMeals={filteredMeals} />

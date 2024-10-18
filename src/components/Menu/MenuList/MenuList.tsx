@@ -27,9 +27,7 @@ const MenuHeader = ({ filteredMeals }: FilteredMealsProps): ReactElement => {
   return (
     <>
       {' '}
-      {filteredMeals.length == 0 && (
-        <p>Nothing found in this shop.</p>
-      )}
+      {filteredMeals.length == 0 && <p>Nothing found in this shop.</p>}
       {filteredMeals.map((meal: MealProps) => (
         <li key={meal.id} className={cx('menu-list')}>
           <div className={cx('menu-list__header')}>

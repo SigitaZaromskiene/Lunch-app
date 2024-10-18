@@ -1,11 +1,20 @@
 import { ReactElement, FormEvent, ChangeEvent } from 'react';
 import vendorsData from '../../../data/db.json';
-import styles from './Search.module.scss';
+import styles from './SearchMenu.module.scss';
 import classNames from 'classnames/bind';
+import SortMenu from '../SortMenu';
 
 const cx = classNames.bind(styles);
 
 const vendorsNames = vendorsData.vendors;
+
+export type Meals = {
+  id: number;
+  name: string;
+  price: number;
+  rating: number;
+  ordersCount: number;
+};
 
 type SearchProps = {
   selectedVendor: string;
@@ -13,6 +22,7 @@ type SearchProps = {
   searchItem: string;
   setSearchItem: (item: string) => void;
   setFilteredMeals: (meals: any[]) => void;
+  filteredMeals: Meals[];
 };
 
 const Search = ({
@@ -21,11 +31,11 @@ const Search = ({
   searchItem,
   setSearchItem,
   setFilteredMeals,
+  filteredMeals,
 }: SearchProps): ReactElement => {
   const handleSearch = (e: FormEvent) => {
     e.preventDefault();
 
-    console.log(searchItem);
     const meals = vendorsData.meals;
 
     const filtered = meals.filter((meal) => {
@@ -42,15 +52,15 @@ const Search = ({
   };
 
   return (
-    <form className={cx('search')} onSubmit={handleSearch}>
-      <div className={cx('search__form')}>
-        <div className={cx('search__button')}>
-          <div className={cx('search__options')}>
-            <label className={cx('search__label')} htmlFor="search-term">
+    <form className={cx('search-menu')} onSubmit={handleSearch}>
+      <div className={cx('search-menu__form')}>
+        <div className={cx('search-menu__button')}>
+          <div className={cx('search-menu__options')}>
+            <label className={cx('search-menu__label')} htmlFor="search-term">
               What dish are you looking for?
             </label>
             <input
-              className={cx('search__input', 'searchIcon')}
+              className={cx('search-menu__input', 'searchIcon')}
               id="search-term"
               type="text"
               placeholder="Enter a dish"
@@ -60,13 +70,13 @@ const Search = ({
               }
             />
           </div>
-          <div className={cx('search__options')}>
-            <label className={cx('search__label')} htmlFor="vendors">
+          <div className={cx('search-menu__options')}>
+            <label className={cx('search-menu__label')} htmlFor="vendors">
               Vendor
             </label>
             <select
               id="vendors"
-              className={cx('search__select')}
+              className={cx('search-menu__select')}
               value={selectedVendor}
               onChange={(e) => setSelectedVendor(e.target.value)}
             >
@@ -79,14 +89,15 @@ const Search = ({
             </select>
           </div>
         </div>
-        <button
-          className={cx('search__btn')}
-          type="submit"
-          disabled={searchItem === ''}
-        >
+        <button className={cx('search-menu__btn')} type="submit">
           Search
         </button>
       </div>
+      <div className={cx('search-menu__border')}></div>
+      <SortMenu
+        filteredMeals={filteredMeals}
+        setFilteredMeals={setFilteredMeals}
+      />
     </form>
   );
 };

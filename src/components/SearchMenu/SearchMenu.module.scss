@@ -1,7 +1,7 @@
 @import '../../assets/styles/Mixins.module.scss';
 @import '../../assets/styles/Variables.module.scss';
 
-.search {
+.search-menu {
   width: 100%;
   @include flex(center, center, column, 0);
   background-color: $white;
@@ -83,41 +83,6 @@
     // cannot use class in this case
     option {
       color: $grey300;
-    }
-  }
-
-  &__sort {
-    @include flex(flex-start, center, row, 1.5rem);
-    @include spacing(s);
-    width: 100%;
-
-    &-text {
-      font-size: 0.8rem;
-      font-weight: $fontWeightRegular;
-    }
-    &-buttons {
-      @include flex(flex-start, center, row, 1.5rem);
-      list-style: none;
-    }
-    &-button {
-      @include spacing(xxxs);
-      background-color: transparent;
-      border: 0.1rem solid transparent;
-      border-radius: $borderRadiusRegular;
-      cursor: pointer;
-      font-size: 0.7rem;
-      font-weight: $fontWeightMedium;
-      padding: 0.2rem 0.9rem;
-
-      &:hover {
-        background-color: $secondary100;
-        border: 0.1rem solid $secondary300;
-      }
-
-      &:active {
-        background-color: $secondary200;
-        border: 0.1rem solid $secondary300;
-      }
     }
   }
 

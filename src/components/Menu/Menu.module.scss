@@ -2,7 +2,7 @@
 @import '../../assets/styles/Variables.module.scss';
 
 .main {
-  @include flex (flex-start, center, column, 2rem);
+  @include flex(flex-start, center, column, 2rem);
 }
 
 .menu {

@@ -33,10 +33,6 @@
       color: $primary600;
     }
 
-    &:active {
-      background-color: $secondary300;
-    }
-
     &::after {
       content: '';
       position: absolute;
